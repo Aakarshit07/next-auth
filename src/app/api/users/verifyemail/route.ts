@@ -5,7 +5,7 @@ import { NextResponse, NextRequest } from 'next/server'
 
 connect();
 
-export async function PORT(request: NextRequest) {
+export async function POST(request: NextRequest) {
     try {
         
         const reqBody = await request.json(); //here we using await because in nextjs we use await on request beacuse reaquest is a promise but in express these are handled behind the seens

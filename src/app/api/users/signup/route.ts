@@ -35,7 +35,7 @@ export async function POST(request: NextRequest) {
         //Send verification email
         await sendEmail({
             email, 
-            eamilType: "VERIFY",
+            emailType: "VERIFY",
             userId: savedUser._id
         })
 

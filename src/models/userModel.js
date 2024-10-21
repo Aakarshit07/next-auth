@@ -11,9 +11,9 @@ const userSchema = new mongoose.Schema({
         required: [true, 'Please Provide a email'],
         unique: true
     },
-    username: {
+    password: {
         type: String,
-        required: [true, 'Please Provide a password'],
+        required: [true, 'Please Provide a password']
     },
     isVerified: {
         type: Boolean,
@@ -40,6 +40,6 @@ const userSchema = new mongoose.Schema({
 // if connecting for the first time then we create a new model
 // mongoose.model('users', userSchema)
 
-const User = mongoose.model.users || mongoose.model('users', userSchema);
+const User = mongoose.models.users || mongoose.model('users', userSchema);
 
 export default User;
